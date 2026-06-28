@@ -1,47 +1,31 @@
 const list = document.getElementById('game-list');
-const canvas = document.getElementById('gameCanvas');
-const ctx = canvas.getContext('2d');
-const container = document.getElementById('game-container');
+const searchInput = document.getElementById('search');
 
-// Массив игр (сюда дописывать остальные 49)
-const games = {
-    snake: {
-        name: "Змейка",
-        run: () => {
-            ctx.fillStyle = "green";
-            ctx.fillRect(50, 50, 50, 50); // Тут логика змейки
-        }
-    },
-    pingpong: {
-        name: "Пинг-Понг",
-        run: () => {
-            ctx.fillStyle = "white";
-            ctx.fillRect(10, 200, 20, 100); // Логика ракетки
-        }
+// Генерируем 50 игр
+for (let i = 1; i <= 50; i++) {
+    const gameName = `Игра ${i}`;
+    let btn = document.createElement('button');
+    btn.className = 'neon-btn';
+    btn.innerHTML = `${gameName}<br><span onclick="toggleFav(event, ${i})">⭐</span>`;
+    btn.onclick = () => alert("Запуск " + gameName);
+    list.appendChild(btn);
+}
+
+// Поиск
+searchInput.oninput = function() {
+    let filter = this.value.toUpperCase();
+    let buttons = list.getElementsByTagName('button');
+    for (let btn of buttons) {
+        btn.style.display = btn.innerText.toUpperCase().indexOf(filter) > -1 ? "" : "none";
     }
 };
 
-// Генерация кнопок
-Object.keys(games).forEach(key => {
-    let btn = document.createElement('button');
-    btn.className = 'neon-btn';
-    btn.innerText = games[key].name;
-    btn.onclick = () => startGame(key);
-    list.appendChild(btn);
-});
-
-function startGame(id) {
-    document.getElementById('menu').style.display = 'none';
-    container.style.display = 'block';
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-
-    function loop() {
-        ctx.fillStyle = 'rgba(0,0,0,0.1)';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        
-        games[id].run(); // Запуск логики выбранной игры
-        requestAnimationFrame(loop);
-    }
-    loop();
+// Фавориты (сохранение в браузер)
+function toggleFav(e, id) {
+    e.stopPropagation();
+    let favs = JSON.parse(localStorage.getItem('favs') || '[]');
+    if (favs.includes(id)) favs = favs.filter(f => f !== id);
+    else favs.push(id);
+    localStorage.setItem('favs', JSON.stringify(favs));
+    alert("Игра " + id + " добавлена в избранное!");
 }
