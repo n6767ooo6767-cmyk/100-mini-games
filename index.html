@@ -1,202 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MiniVerse</title>
-
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>50 Neon Games Hub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<header>
-
-    <div class="logo">
-        🎮 MiniVerse
+    <div id="menu">
+        <h1>Выберите игру</h1>
+        <div id="game-list"></div>
+    </div>
+    
+    <div id="game-container" style="display:none;">
+        <button id="backBtn" onclick="location.reload()">НАЗАД В МЕНЮ</button>
+        <canvas id="gameCanvas"></canvas>
     </div>
 
-    <nav>
-
-        <a href="#">🏠 Home</a>
-        <a href="#">🔥 Popular</a>
-        <a href="#">⭐ Favorites</a>
-        <a href="#">⚙ Settings</a>
-
-    </nav>
-
-</header>
-
-<section class="hero">
-
-    <h1>Play Browser Mini Games</h1>
-
-    <p>
-        Collection of fun HTML games.
-        New games every update.
-    </p>
-
-</section>
-
-<main>
-
-<h2>Categories</h2>
-
-<div class="categories">
-
-<div class="category">
-⚡
-<h3>Reaction</h3>
-<p>Reaction & Reflex Games</p>
-</div>
-
-<div class="category">
-🏃
-<h3>Speed</h3>
-<p>Speed Challenges</p>
-</div>
-
-<div class="category">
-🎯
-<h3>Accuracy</h3>
-<p>Aim & Precision</p>
-</div>
-
-<div class="category">
-🧠
-<h3>Puzzle</h3>
-<p>Brain Games</p>
-</div>
-
-<div class="category">
-🎲
-<h3>Arcade</h3>
-<p>Classic Arcade</p>
-</div>
-
-<div class="category">
-🧘
-<h3>Relax</h3>
-<p>Calm Games</p>
-</div>
-
-<div class="category">
-🎉
-<h3>Party</h3>
-<p>Play Together</p>
-</div>
-
-</div>
-
-<h2>Popular Games</h2>
-
-<div class="games">
-
-<div class="game-card">
-
-<div class="icon">⚡</div>
-
-<h3>Reaction Test</h3>
-
-<p>Test your reaction speed.</p>
-
-<button onclick="location.href='games/reaction-test/index.html'">
-    ▶ Play
-</button>
-
-</div>
-
-<div class="game-card">
-
-<div class="icon">🐍</div>
-
-<h3>Snake</h3>
-
-<p>Classic snake game.</p>
-
-<button>Play</button>
-
-</div>
-
-<div class="game-card">
-
-<div class="icon">🧠</div>
-
-<h3>Memory</h3>
-
-<p>Find matching cards.</p>
-
-<button>Play</button>
-
-</div>
-
-<div class="game-card">
-
-<div class="icon">🎯</div>
-
-<h3>Aim Trainer</h3>
-
-<p>Improve your accuracy.</p>
-
-<button onclick="location.href='games/aim-trainer/index.html'">
-    ▶ Play
-</button>
-
-</div>
-
-<div class="game-card">
-
-<div class="icon">🎈</div>
-
-<h3>Balloon Pop</h3>
-
-<p>Pop balloons as fast as possible.</p>
-
-<button>Play</button>
-
-</div>
-
-<div class="game-card">
-
-<div class="icon">🍎</div>
-
-<h3>Fruit Catch</h3>
-
-<p>Catch falling fruits.</p>
-
-<button>Play</button>
-    
-</div>
-
-<div class="game-card">
-
-    <div class="icon">🎨</div>
-
-    <h3>Color Lab</h3>
-
-    <p>Mix colors to match the target as accurately as possible.</p>
-
-    <button onclick="location.href='games/ColorLab/index.html'">
-        ▶ Play
-    </button>
-
-</div>
-
-</div>
-
-</div>
-
-</main>
-
-<footer>
-
-<p>
-MiniVerse © 2026
-</p>
-
-</footer>
-
-<script src="script.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>
