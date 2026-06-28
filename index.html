@@ -1,47 +1,182 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fruit Ninja Webcam PRO</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MiniVerse</title>
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main class="app">
-    <section class="hero">
-      <h1>🍉 Fruit Ninja Webcam PRO</h1>
-      <p>Играй прямо в браузере: камера ищет фиолетовый контроллер, а ты разрезаешь фрукты.</p>
 
-      <div class="buttons">
-        <button id="startBtn">▶ Играть</button>
-        <button id="calibrateBtn">🟣 Калибровать цвет</button>
-        <button id="resetBtn">↻ Рестарт</button>
-      </div>
+<header>
 
-      <p class="hint">
-        Разреши доступ к камере. Поднеси фиолетовый предмет в белый квадрат и нажми «Калибровать цвет».
-      </p>
-    </section>
+    <div class="logo">
+        🎮 MiniVerse
+    </div>
 
-    <section class="game-wrap">
-      <video id="video" autoplay playsinline muted></video>
-      <canvas id="canvas" width="960" height="720"></canvas>
-    </section>
+    <nav>
 
-    <section class="panel">
-      <div>Score: <b id="score">0</b></div>
-      <div>Lives: <b id="lives">3</b></div>
-      <div>High Score: <b id="highScore">0</b></div>
-      <div id="status">Status: waiting</div>
-    </section>
+        <a href="#">🏠 Home</a>
+        <a href="#">🔥 Popular</a>
+        <a href="#">⭐ Favorites</a>
+        <a href="#">⚙ Settings</a>
 
-    <section class="instructions">
-      <h2>Как играть</h2>
-      <p>Нужен яркий фиолетовый предмет: маркер, носок, мячик, палочка. Маши им перед камерой как мечом.</p>
-      <p>Фрукты дают очки. Бомбы отнимают жизнь. Если пропустишь фрукт — тоже минус жизнь.</p>
-    </section>
-  </main>
+    </nav>
 
-  <script src="game.js"></script>
+</header>
+
+<section class="hero">
+
+    <h1>Play Browser Mini Games</h1>
+
+    <p>
+        Collection of fun HTML games.
+        New games every update.
+    </p>
+
+</section>
+
+<main>
+
+<h2>Categories</h2>
+
+<div class="categories">
+
+<div class="category">
+⚡
+<h3>Reaction</h3>
+<p>Reaction & Reflex Games</p>
+</div>
+
+<div class="category">
+🏃
+<h3>Speed</h3>
+<p>Speed Challenges</p>
+</div>
+
+<div class="category">
+🎯
+<h3>Accuracy</h3>
+<p>Aim & Precision</p>
+</div>
+
+<div class="category">
+🧠
+<h3>Puzzle</h3>
+<p>Brain Games</p>
+</div>
+
+<div class="category">
+🎲
+<h3>Arcade</h3>
+<p>Classic Arcade</p>
+</div>
+
+<div class="category">
+🧘
+<h3>Relax</h3>
+<p>Calm Games</p>
+</div>
+
+<div class="category">
+🎉
+<h3>Party</h3>
+<p>Play Together</p>
+</div>
+
+</div>
+
+<h2>Popular Games</h2>
+
+<div class="games">
+
+<div class="game-card">
+
+<div class="icon">⚡</div>
+
+<h3>Reaction Test</h3>
+
+<p>Test your reaction speed.</p>
+
+<button>Play</button>
+
+</div>
+
+<div class="game-card">
+
+<div class="icon">🐍</div>
+
+<h3>Snake</h3>
+
+<p>Classic snake game.</p>
+
+<button>Play</button>
+
+</div>
+
+<div class="game-card">
+
+<div class="icon">🧠</div>
+
+<h3>Memory</h3>
+
+<p>Find matching cards.</p>
+
+<button>Play</button>
+
+</div>
+
+<div class="game-card">
+
+<div class="icon">🎯</div>
+
+<h3>Aim Trainer</h3>
+
+<p>Improve your accuracy.</p>
+
+<button>Play</button>
+
+</div>
+
+<div class="game-card">
+
+<div class="icon">🎈</div>
+
+<h3>Balloon Pop</h3>
+
+<p>Pop balloons as fast as possible.</p>
+
+<button>Play</button>
+
+</div>
+
+<div class="game-card">
+
+<div class="icon">🍎</div>
+
+<h3>Fruit Catch</h3>
+
+<p>Catch falling fruits.</p>
+
+<button>Play</button>
+
+</div>
+
+</div>
+
+</main>
+
+<footer>
+
+<p>
+MiniVerse © 2026
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
